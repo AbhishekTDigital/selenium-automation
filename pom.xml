@@ -6,6 +6,7 @@
   <groupId>LoginPipeline</groupId>
   <artifactId>LoginPipeline</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>LoginPipeline</name>
   <url>http://www.example.com</url>
@@ -15,17 +16,13 @@
     <maven.compiler.release>17</maven.compiler.release> <!-- Ensure compatibility with JDK 17 or 11 -->
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.11.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+     <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
 
   <dependencies>
     <!-- Cucumber dependencies for TestNG -->
@@ -84,7 +81,7 @@
     </dependency>
 
     <!-- Logging dependencies -->
-    <dependency>
+<!--     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <version>2.24.1</version>
@@ -93,7 +90,7 @@
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <version>2.24.1</version>
-    </dependency>
+    </dependency> -->
 
     <!-- TestNG for parallel execution and configuration -->
     <dependency>
@@ -141,9 +138,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.3.0</version>
         <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
+            <includes>
+                <include>**/*Run.java</include> <!-- Make sure the test pattern matches your test classes -->
+            </includes>
         </configuration>
       </plugin>
     </plugins>
