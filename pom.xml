@@ -145,7 +145,7 @@
         <version>3.3.0</version>
         <configuration>
             <includes>
-                <include>**/*Run.java</include> <!-- Make sure the test pattern matches your test classes -->
+                <include>**/*Run.java</include> <!-- Ensure the test pattern matches your test classes -->
             </includes>
         </configuration>
       </plugin>
