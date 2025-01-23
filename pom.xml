@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release> <!-- Ensure compatibility with JDK 17 -->
+    <maven.compiler.release>17</maven.compiler.release> <!-- Ensure compatibility with JDK 17 or 11 -->
   </properties>
 
   <dependencyManagement>
@@ -69,11 +69,11 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Cucumber Java support -->
+    <!-- Selenium WebDriver for interacting with the browser -->
     <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>7.18.1</version>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.24.0</version>
     </dependency>
 
     <!-- WebDriverManager to handle browser driver installation -->
@@ -81,13 +81,6 @@
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>5.7.0</version>
-    </dependency>
-
-    <!-- Selenium WebDriver for interacting with the browser -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.24.0</version>
     </dependency>
 
     <!-- Logging dependencies -->
