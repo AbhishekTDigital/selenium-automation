@@ -12,8 +12,7 @@
   <url>http://www.example.com</url>
 
   <properties>
-    <!-- Use dynamic system path for tools.jar -->
-    <tools-systemPath>${env.JAVA_HOME}/lib/tools.jar</tools-systemPath>
+    <!-- Removed tools.jar dependency -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
@@ -115,15 +114,6 @@
       <version>5.7.0</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/com.sun/tools -->
-    <dependency>
-      <groupId>com.sun</groupId>
-      <artifactId>tools</artifactId>
-      <version>1.5.0</version>
-      <scope>system</scope>
-      <systemPath>${tools-systemPath}</systemPath>
-    </dependency>
-    
     <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
     <dependency>
       <groupId>commons-io</groupId>
